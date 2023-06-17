@@ -10,10 +10,11 @@ __all__ = ['CS8Connection', 'di_params', 'do_params', 'state_params',
            'position_params']
 
 
-MODEL_CATS, MODEL_ISARA = (0, 1)
+MODEL_CATS, MODEL_ISARA, MODEL_ISARA2 = (0, 1, 2)
 MODELS = {
-    MODEL_CATS: "CATS",
-    MODEL_ISARA: "ISARA",
+    MODEL_CATS  : "CATS",
+    MODEL_ISARA : "ISARA",
+    MODEL_ISARA2: "ISARA2",
 }
 
 PUCK_IGNORE, PUCK_SPINE, PUCK_UNIPUCK = (0, 1, 2)
@@ -450,6 +451,8 @@ class CS8Connection:
     def set_model(self, model):
         if model in ["Isara", "isara", "i"]:
             self.model = MODEL_ISARA
+        elif model in ["Isara2", "isara2", "i2"]:
+            self.model = MODEL_ISARA2
 
     def get_model(self):
         if self.model in MODELS:
