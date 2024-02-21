@@ -1053,7 +1053,7 @@ class CS8Connection:
 
             if len(args):
                 args_str = ','.join(map(str, args))
-                cmd_and_args = 'traj(' + cmd + ', ' + args_str + ')'
+                cmd_and_args = 'traj(' + cmd + ',' + args_str + ')'
             else:
                 cmd_and_args = 'traj(' + cmd + ')'
 
